@@ -2,4 +2,39 @@ html,
 body {
     margin: 0;
     padding: 0;
+    font-family: "Roboto", sans-serif;
+}
+
+h1 {
+    color: #0f8cdf;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+header,
+main {
+    width: 290px;
+    margin: 0 auto;
+}
+
+header {
+    padding-bottom: 25px;
+}
+
+.profile-pic {
+    border: 1px solid lightgray;
+    border-radius: 50%;
+    width: 48px;
+}
+
+.tweet-btn {
+    background-color: #1da1f2;
+    border: none;
+    color: white;
+    padding: 10px 19px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 600;
+    width: 100%;
 }
