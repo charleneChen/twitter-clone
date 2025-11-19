@@ -21,10 +21,27 @@ header {
     padding-bottom: 25px;
 }
 
+.tweet-input-area {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
 .profile-pic {
     border: 1px solid lightgray;
     border-radius: 50%;
     width: 48px;
+}
+
+.tweet-input {
+    border: none;
+    height: 60px;
+    width: 100%;
+    font-size: 20px;
+    line-height: 30px;
+    padding: 10px;
+    margin: 0 0 20px 0;
+    resize: none;
 }
 
 .tweet-btn {
