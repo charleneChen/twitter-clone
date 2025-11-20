@@ -74,6 +74,11 @@ function getFeedHtml() {
             likeIconclass = "liked";
         }
 
+        let retweetIconClass = "";
+        if (tweet.isRetweeted) {
+            retweetIconClass = "retweeted";
+        }
+
         feedHtml += `
             <div class="tweet">
                 <img src="${tweet.profilePic}" alt="A profile picture of user ${tweet.handle}" class="profile-pic">
@@ -90,7 +95,7 @@ function getFeedHtml() {
                             ${tweet.likes}
                         </span>
                         <span class="tweet-detail">
-                            <i class="fa-solid fa-retweet" data-retweet="${tweet.uuid}"></i>
+                            <i class="fa-solid fa-retweet ${retweetIconClass}" data-retweet="${tweet.uuid}"></i>
                             ${tweet.retweets}
                         </span>
                     </div>

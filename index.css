@@ -99,3 +99,7 @@ header {
 .liked {
     color: red;
 }
+
+.retweeted {
+    color: lightgreen;
+}
