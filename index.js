@@ -50,7 +50,20 @@ function handleReplyClick(replyId) {
     document.getElementById(`replies-${replyId}`).classList.toggle("hidden");
 }
 
-function handleTweetBtnClick() {}
+function handleTweetBtnClick() {
+    tweetsData.unshift({
+        handle: `@Charlene 😍`,
+        profilePic: `images/scrimbalogo.png`,
+        likes: 0,
+        retweets: 0,
+        tweetText: tweetInput.value,
+        replies: [],
+        isLiked: false,
+        isRetweeted: false,
+        uuid: uuidv4(),
+    });
+    renderFeedHtml();
+}
 
 function getFeedHtml() {
     let feedHtml = ``;
