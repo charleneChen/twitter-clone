@@ -60,11 +60,38 @@ header {
     display: flex;
     align-items: flex-start;
     gap: 10px;
-    margin-top: 15px;
+    margin: 15px 0;
     border-top: 1px solid #bcbcbc;
-    padding: 15px 0;
+    padding: 20px 0 0 0;
 }
 
 .tweet-handle {
     margin-top: 0;
+    font-size: 12px;
+    color: #555;
+    font-weight: 500;
+}
+
+.tweet-text {
+    width: 207px;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.tweet-details {
+    display: flex;
+    font-size: 13px;
+    gap: 30px;
+}
+
+.tweet-detail {
+    display: flex;
+    gap: 4px;
+}
+
+.fa-solid,
+.fa-regular {
+    color: #999;
+    cursor: pointer;
+    font-size: 15px;
 }
