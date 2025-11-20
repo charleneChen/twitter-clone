@@ -51,18 +51,21 @@ function handleReplyClick(replyId) {
 }
 
 function handleTweetBtnClick() {
-    tweetsData.unshift({
-        handle: `@Charlene 😍`,
-        profilePic: `images/scrimbalogo.png`,
-        likes: 0,
-        retweets: 0,
-        tweetText: tweetInput.value,
-        replies: [],
-        isLiked: false,
-        isRetweeted: false,
-        uuid: uuidv4(),
-    });
-    renderFeedHtml();
+    if (tweetInput.value) {
+        tweetsData.unshift({
+            handle: `@Charlene 😍`,
+            profilePic: `images/scrimbalogo.png`,
+            likes: 0,
+            retweets: 0,
+            tweetText: tweetInput.value,
+            replies: [],
+            isLiked: false,
+            isRetweeted: false,
+            uuid: uuidv4(),
+        });
+        renderFeedHtml();
+        tweetInput.value = "";
+    }
 }
 
 function getFeedHtml() {
