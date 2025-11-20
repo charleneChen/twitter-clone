@@ -79,6 +79,22 @@ function getFeedHtml() {
             retweetIconClass = "retweeted";
         }
 
+        let repliesHtml = ``;
+
+        if (tweet.replies.length) {
+            tweet.replies.forEach(function (reply) {
+                repliesHtml += `
+                    <div class="tweet-reply">
+                        <img src="${reply.profilePic}" alt="A user profile picture for ${reply.handle}" class="profile-pic">
+                        <div>
+                            <p>${reply.handle}<p>
+                            <p>${reply.tweetText}</p>
+                        </div>
+                    </div>
+                `;
+            });
+        }
+
         feedHtml += `
             <div class="tweet">
                 <img src="${tweet.profilePic}" alt="A profile picture of user ${tweet.handle}" class="profile-pic">
@@ -101,6 +117,7 @@ function getFeedHtml() {
                     </div>
                 </div>
             </div>
+            ${repliesHtml}
         `;
     });
     return feedHtml;
