@@ -112,3 +112,7 @@ header {
 .retweeted {
     color: lightgreen;
 }
+
+.hidden {
+    display: none;
+}
