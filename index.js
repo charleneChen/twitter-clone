@@ -69,6 +69,11 @@ function getFeedHtml() {
     */
 
     tweetsData.forEach(function (tweet) {
+        let likeIconclass = "";
+        if (tweet.isLiked) {
+            likeIconclass = "liked";
+        }
+
         feedHtml += `
             <div class="tweet">
                 <img src="${tweet.profilePic}" alt="A profile picture of user ${tweet.handle}" class="profile-pic">
@@ -81,7 +86,7 @@ function getFeedHtml() {
                             ${tweet.replies.length}
                         </span>
                         <span class="tweet-detail">
-                            <i class="fa-solid fa-heart" data-like="${tweet.uuid}"></i>
+                            <i class="fa-solid fa-heart ${likeIconclass}" data-like="${tweet.uuid}"></i>
                             ${tweet.likes}
                         </span>
                         <span class="tweet-detail">

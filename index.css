@@ -95,3 +95,7 @@ header {
     cursor: pointer;
     font-size: 15px;
 }
+
+.liked {
+    color: red;
+}
