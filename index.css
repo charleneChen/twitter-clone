@@ -57,12 +57,15 @@ header {
 }
 
 .tweet {
-    display: flex;
-    align-items: flex-start;
-    gap: 10px;
     margin: 15px 0;
     border-top: 1px solid #bcbcbc;
     padding: 20px 0 0 0;
+}
+
+.tweet-inner {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
 }
 
 .tweet-handle {
@@ -87,6 +90,12 @@ header {
 .tweet-detail {
     display: flex;
     gap: 4px;
+}
+
+.tweet-reply {
+    border-top: 1px solid lightgray;
+    padding: 20px 0 0 0;
+    margin: 10px 0 10px 48px;
 }
 
 .fa-solid,

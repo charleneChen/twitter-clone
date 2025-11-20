@@ -87,8 +87,8 @@ function getFeedHtml() {
                     <div class="tweet-reply">
                         <img src="${reply.profilePic}" alt="A user profile picture for ${reply.handle}" class="profile-pic">
                         <div>
-                            <p>${reply.handle}<p>
-                            <p>${reply.tweetText}</p>
+                            <p class="tweet-handle">${reply.handle}<p>
+                            <p class="tweet-text">${reply.tweetText}</p>
                         </div>
                     </div>
                 `;
@@ -96,7 +96,8 @@ function getFeedHtml() {
         }
 
         feedHtml += `
-            <div class="tweet">
+        <div class="tweet">
+            <div class="tweet-inner">
                 <img src="${tweet.profilePic}" alt="A profile picture of user ${tweet.handle}" class="profile-pic">
                 <div>
                     <p class="tweet-handle">${tweet.handle}</p>
@@ -117,7 +118,10 @@ function getFeedHtml() {
                     </div>
                 </div>
             </div>
-            ${repliesHtml}
+            <div id="replies-${tweet.uuid}">
+                ${repliesHtml}
+            </div>
+        </div>
         `;
     });
     return feedHtml;
